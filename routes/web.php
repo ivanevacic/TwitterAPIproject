@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'TwitterController@twitterUserTimeline');
+Route::post('tweet', ['as' => 'post.tweet', 'uses' => 'TwitterController@tweet']);  //Submit tweet route
